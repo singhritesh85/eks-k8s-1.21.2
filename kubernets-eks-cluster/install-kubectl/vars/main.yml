@@ -1,0 +1,5 @@
+---
+# vars file for install-kubectl
+########variable for kubectl version###########
+kubectl_version: "v1.21.2"             #"v1.15.0"
+kubectl_download_path: "https://storage.googleapis.com/kubernetes-release/release/{{ kubectl_version }}/bin/linux/amd64"

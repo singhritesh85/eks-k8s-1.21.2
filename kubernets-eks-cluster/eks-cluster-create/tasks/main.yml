@@ -1,0 +1,10 @@
+---
+# tasks file for eks-cluster-create
+- name: create eks cluster
+  shell: "eksctl create cluster --name={{ cluster_name }} --tags={{ tags }} --region={{ region }} --zones={{ zones }} --version={{ kubernetes_version }} --nodegroup-name={{ nodegroup_name }} --node-type={{ node_type }} --nodes={{ nodes_desired_count }} --nodes-min={{ nodes_min }} --nodes-max={{ nodes_max }} --node-volume-size={{ node_volume_size }} --node-volume-type={{ node_volume_type }} --max-pods-per-node={{ max_pods_per_node }} --ssh-public-key={{ ssh_public_key_path }} --enable-ssm --node-ami-family={{ node_ami_family }} --node-private-networking --vpc-cidr={{ vpc_cidr }}" ## --full-ecr-access --cfn-role-arn={{ cfn_role_arn }} --node-ami={{ node_ami }}
+
+- name: Verify that all Kubernetes nodes are ready
+  shell: kubectl get nodes 
+  register: cluster_nodes
+
+- debug: msg="{{ cluster_nodes.stdout }}"

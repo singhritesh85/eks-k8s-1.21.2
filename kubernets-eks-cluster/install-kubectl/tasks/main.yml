@@ -1,0 +1,15 @@
+---
+# tasks file for install-kubectl
+- name: Download Kubectl binaries
+  get_url:
+    url: "{{ kubectl_download_path }}/{{ item }}"
+    dest: /usr/local/bin
+    owner: root
+    group: root
+    mode: 0755
+    force: yes
+    # TODO Add hash check
+  with_items:
+  - kubectl
+  become: true
+

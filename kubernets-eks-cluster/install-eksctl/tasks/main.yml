@@ -1,0 +1,15 @@
+---
+# tasks file for install-eksctl
+- name: Download eksctl binaries
+  ansible.builtin.unarchive:
+    src: "{{ eksctl_download_path }}"
+    dest: /usr/local/bin
+    owner: root
+    group: root
+    mode: 0755
+    force: yes
+    remote_src: yes
+    # TODO Add hash check
+    #  with_items:
+    #- eksctl
+  become: true

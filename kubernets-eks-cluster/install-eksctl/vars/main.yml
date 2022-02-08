@@ -1,0 +1,4 @@
+---
+# vars file for install-eksctl
+eksctl_version: "v0.76.0"      #"0.37.0"
+eksctl_download_path: "https://github.com/weaveworks/eksctl/releases/download/{{ eksctl_version }}/eksctl_Linux_amd64.tar.gz"

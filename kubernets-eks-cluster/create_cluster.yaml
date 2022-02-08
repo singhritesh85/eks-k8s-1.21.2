@@ -1,0 +1,8 @@
+---
+- name: create kubernetes cluster using eksctl
+  hosts: localhost
+  connection: local
+  roles:
+  - install-kubectl
+  - install-eksctl
+  - eks-cluster-create 
