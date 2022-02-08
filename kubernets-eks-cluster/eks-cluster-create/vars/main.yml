@@ -17,7 +17,7 @@ node_volume_size: "20"
 node_volume_type: "gp2"
 max_pods_per_node: "20"
 #enable_ssm: true
-node_ami: "ami-0da7821d167922442"  # Use it for kubernetes-1.15 and don't use it for kubernetes-1.21
+#node_ami: "ami-0da7821d167922442"  # Use it for kubernetes-1.15 and don't use it for kubernetes-1.21
 node_ami_family: "Ubuntu2004"            #"Ubuntu1804"
 #node_private_networking: true
 vpc_cidr: "10.20.0.0/16"
