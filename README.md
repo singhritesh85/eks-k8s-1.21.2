@@ -1,3 +1,15 @@
+```
+For Any New kubernetes version just update eksctl version and kubernetes version in the script
+```
+
+
+
+
+
+
+
+
+
 # eks-k8s-1.21.2
 
 A nodegroup can be scaled by using the eksctl scale nodegroup command:
